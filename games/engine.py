@@ -32,7 +32,8 @@ def even(answer, num, counter):
                 sys.exit()
         case _:
             if num % 2 == 0:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'")
+                print(f"'{answer}' is wrong answer ;(. "
+                      "Correct answer was 'yes'")
                 print(f"Let's try again, {name}!")
                 sys.exit()
             else:
