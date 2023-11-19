@@ -1,3 +1,12 @@
+# Brain Games Project by Andrey Makarov from Hexlet
+
+**Brain Games** - это набор из пяти игр для тренировки ума. Чтобы попробовать сыграть, Вам требуется лишь ввести установить пакет с данным набором из PyPI и запустить одну из игр в терминале Linux. Все команды для запуска конкретной игры указаны в списке ниже:
+1. brain-even - "Проверка на чётность"
+2. brain-calc - "Калькулятор"
+3. brain-gcd - "Наибольший общий делитель"
+4. brain-progression - "Арифметическая прогрессия"
+5. brain-prime - "Простое ли число?"
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/evisorexx/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/evisorexx/python-project-49/actions)
 ### CodeClimate Maintainability:

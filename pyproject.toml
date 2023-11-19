@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "A pack of mathematical games, which launches from Linux terminal. Written on Python."
+classifiers = [
+    "Topic :: Games/Entertainment",
+]
 authors = ["Andrey M. <tolkoigri@yandex.ru>"]
 readme = "README.md"
+repository = "https://github.com/evisorexx/python-project-49"
 packages = [
     { include = "games" },
 ]
