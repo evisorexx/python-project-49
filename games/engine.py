@@ -58,3 +58,25 @@ def calc(answer, num1, num2, operation, counter):
         sys.exit()
     if counter == 2:
         print(f'Congratulations, {name}!')
+
+
+def divisions(answer, num1, num2, counter):
+    try:
+        answer = int(answer)
+    except ValueError:
+        print(f"Result must be an integer!\nLet's try again, {name}")
+        sys.exit()
+    while num1 != num2:
+        if num1 > num2:
+            num1 = num1 - num2
+        else:
+            num2 = num2 - num1
+    if int(answer) == num2:
+        print('Correct!')
+    else:
+        print(f"{int(answer)} is wrong answer ;(. " \
+              f"Correct answer was {num2}.")
+        print(f"Let's try again, {name}")
+        sys.exit()
+    if counter == 2:
+        print(f'Congratulations, {name}!')
