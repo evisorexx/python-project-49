@@ -115,3 +115,38 @@ def progression(answer, counter):
         sys.exit()
     if counter == 2:
         print(f'Congratulations, {name}!')
+
+
+# For Prime
+def is_prime(answer, num, counter):
+    from math import ceil, sqrt
+    enum = 2
+    match answer:
+        case 'yes':
+            while enum < ceil(sqrt(num)):
+                if num % enum != 0:
+                    enum += 1
+                    continue
+                else:
+                    print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+                    print(f"Let's try again, {name}")
+                    sys.exit()
+            print('Correct!')
+        case 'no':
+            while enum < ceil(sqrt(num)):
+                if num % enum == 0:
+                    print('Correct!')
+                    break
+                elif enum < ceil(sqrt(num)) - 1:
+                    enum += 1
+                    continue
+                else:
+                    print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+                    print(f"Let's try again, {name}")
+                    sys.exit()
+        case _:
+            print("You must enter 'yes' or 'no' as answer!")
+            print(f"Let's try again, {name}")
+            sys.exit()
+    if counter == 2:
+        print(f'Congratulations, {name}!')
