@@ -65,22 +65,27 @@ def calc(answer, num1, num2, operation, counter):
 
 
 # For Greatest Common Divisor
+def euclid(a, b):
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    return b
+
+
 def divisions(answer, num1, num2, counter):
     try:
         answer = int(answer)
     except ValueError:
         print(f"Result must be an integer!\nLet's try again, {name}")
         sys.exit()
-    while num1 != num2:
-        if num1 > num2:
-            num1 = num1 - num2
-        else:
-            num2 = num2 - num1
-    if int(answer) == num2:
+    check = euclid(num1, num2)
+    if int(answer) == check:
         print('Correct!')
     else:
         print(f"{int(answer)} is wrong answer ;(. "
-              f"Correct answer was {num2}.")
+              f"Correct answer was {check}.")
         print(f"Let's try again, {name}!")
         sys.exit()
     if counter == 2:
