@@ -10,6 +10,7 @@ def greeter():
     print('Welcome to the Brain Games!')
     global name
     name = re.findall(r'\w+', welcome_user())[1]
+    print(f'Hello, {name}')
 
 
 # For Even
