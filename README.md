@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/ZoPAGAbDt0VhnZObGdW21LUHJ.svg)](https://asciinema.org/a/ZoPAGAbDt0VhnZObGdW21LUHJ)
 ### Brain GCD test video:
 [![asciicast](https://asciinema.org/a/Te4Z40sDLGkCdP5GooqKtzIa8.svg)](https://asciinema.org/a/Te4Z40sDLGkCdP5GooqKtzIa8)
+### Brain Progression test video:
+[![asciicast](https://asciinema.org/a/CLmAPAFdMK216D2QJm7sZhdDe.svg)](https://asciinema.org/a/CLmAPAFdMK216D2QJm7sZhdDe)

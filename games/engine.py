@@ -1,6 +1,7 @@
 
 import sys
 import re
+import random
 import operator
 from games.cli import welcome_user
 
@@ -11,6 +12,7 @@ def greeter():
     name = re.findall(r'\w+', welcome_user())[1]
 
 
+# For Even
 def even(answer, num, counter):
     match answer:
         case 'yes':
@@ -41,6 +43,7 @@ def even(answer, num, counter):
         print(f'Congratulations, {name}!')
 
 
+# For Calculator
 def calc(answer, num1, num2, operation, counter):
     ops = {'+': operator.add, '-': operator.sub, '*': operator.mul, }
     try:
@@ -51,15 +54,16 @@ def calc(answer, num1, num2, operation, counter):
     if int(answer) == ops[operation](max(num1, num2), min(num1, num2)):
         print('Correct!')
     else:
-        print(f"{int(answer)} is wrong answer ;(. " \
-            f"Correct answer was " \
-            f"{ops[operation](max(num1, num2), min(num1, num2))}")
+        print(f"{int(answer)} is wrong answer ;(. "
+              f"Correct answer was "
+              f"{ops[operation](max(num1, num2), min(num1, num2))}")
         print(f"Let's try again, {name}")
         sys.exit()
     if counter == 2:
         print(f'Congratulations, {name}!')
 
 
+# For Greatest Common Divisor
 def divisions(answer, num1, num2, counter):
     try:
         answer = int(answer)
@@ -74,8 +78,39 @@ def divisions(answer, num1, num2, counter):
     if int(answer) == num2:
         print('Correct!')
     else:
-        print(f"{int(answer)} is wrong answer ;(. " \
+        print(f"{int(answer)} is wrong answer ;(. "
               f"Correct answer was {num2}.")
+        print(f"Let's try again, {name}")
+        sys.exit()
+    if counter == 2:
+        print(f'Congratulations, {name}!')
+
+
+# For Progression
+def generation_of_values():
+    global prog_list, missing_elem
+    prog_list, prog_start = [], random.randint(1, 10)
+    step = random.randint(1, 5)
+    for i in range(10):
+        prog_list.append(prog_start)
+        prog_start += step
+    prog_str = ' '.join([str(num) for num in prog_list])
+    missing_elem = prog_list[random.randint(0, len(prog_list) - 1)]
+    return prog_str.replace(str(missing_elem), '..', 1)
+
+
+def progression(answer, counter):
+    try:
+        answer = int(answer)
+    except ValueError:
+        print("Progression element must be an integer!")
+        print(f"Let's try again, {name}")
+        sys.exit()
+    if answer == missing_elem:
+        print('Correct!')
+    else:
+        print(f"{int(answer)} is wrong answer ;(. "
+              f"Correct answer was {missing_elem}.")
         print(f"Let's try again, {name}")
         sys.exit()
     if counter == 2:
