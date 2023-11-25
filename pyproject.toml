@@ -9,7 +9,7 @@ authors = ["Andrey M. <tolkoigri@yandex.ru>"]
 readme = "README.md"
 repository = "https://github.com/evisorexx/python-project-49"
 packages = [
-    { include = "games" },
+    { include = "brain_games" },
 ]
 
 [tool.poetry.dependencies]
@@ -17,12 +17,12 @@ python = "^3.10"
 prompt = "^0.4.1"
 
 [tool.poetry.scripts]
-brain-games = "games.scripts.brain_games:main"
-brain-even = "games.scripts.brain_even:main"
-brain-calc = "games.scripts.brain_calc:main"
-brain-gcd = "games.scripts.brain_gcd:main"
-brain-progression = "games.scripts.brain_progression:main"
-brain-prime = "games.scripts.brain_prime:main"
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.1.0"
