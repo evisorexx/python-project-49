@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-
 import sys
-sys.path.insert(1, 'brain_games')  # Adding directory brain_games/ to PYTHONPATH
+import os
 
-from engine import which_game
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+
+from brain_games.engine import which_game
 
 
 def main():
     which_game('calc', 0)
-    
+
 
 if __name__ == '__main__':
     main()

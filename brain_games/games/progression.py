@@ -20,4 +20,4 @@ def progression(answer, missing_elem):
         return (True, 'Correct!')
     else:
         return (False, f"{int(answer)} is wrong answer ;(. "
-              f"Correct answer was {missing_elem}.")
+                f"Correct answer was {missing_elem}.")

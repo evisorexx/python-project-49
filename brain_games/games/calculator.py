@@ -19,4 +19,3 @@ def calc(question, answer=None):
     else:
         return (False, (f"{int(answer)} is wrong answer ;(. "
                 f"Correct answer was {eval(question)}"))
-    

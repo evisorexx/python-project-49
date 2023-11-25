@@ -18,7 +18,8 @@ def is_prime(answer, num):
                     enum += 1
                     continue
                 else:
-                    return (False, "'yes' is wrong answer ;(. Correct answer was 'no'.")
+                    return (False, "'yes' is wrong answer ;(. "
+                            "Correct answer was 'no'.")
             return (True, 'Correct!')
         case 'no':
             while enum < ceil(sqrt(num)):
