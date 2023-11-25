@@ -40,7 +40,7 @@ def engine(game, name):
                 try:
                     answer = int(answer)
                 except ValueError:
-                    print(f"Result must be an integer!"
+                    print(f"Result must be an integer! "
                           f"Let's try again, {name}")
                     sys.exit()
                 if calc(question, answer)[0]:
