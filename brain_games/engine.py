@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import sys; sys.path.insert(1, 'games')
+from __init__ import *
 from prompt import string
 from games.calculator import calc, calc_values
 from games.even import is_even, even_value
