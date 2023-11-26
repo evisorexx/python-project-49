@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from __init__ import *
+import __init__
 from cli import welcome_user
 
 

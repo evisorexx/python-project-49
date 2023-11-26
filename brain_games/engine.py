@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from __init__ import *
+import sys
 from prompt import string
 from games.calculator import calc, calc_values
 from games.even import is_even, even_value
