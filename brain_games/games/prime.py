@@ -11,6 +11,8 @@ def prime_value():
 
 def is_prime(answer, num):
     enum = 2
+    if num == 2:
+        answer = 'yes'
     match answer:
         case 'yes':
             while enum <= ceil(sqrt(num)):

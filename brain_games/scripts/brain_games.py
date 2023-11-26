@@ -2,6 +2,8 @@
 import __init__
 from cli import welcome_user
 
+__init__
+
 
 def main():
     print('Welcome to the Brain Games!')

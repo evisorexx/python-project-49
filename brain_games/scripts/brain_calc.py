@@ -2,6 +2,8 @@
 import __init__
 from engine import which_game
 
+__init__
+
 
 def main():
     which_game('calc', 0)
