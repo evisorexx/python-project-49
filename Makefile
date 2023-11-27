@@ -17,7 +17,7 @@ force:
 	pip install --user --force-reinstall dist/*.whl
 
 brain-start:
-	poetry run brain-start
+	poetry run brain-games
 
 brain-even:
 	poetry run brain-even
