@@ -16,8 +16,8 @@ lint:
 force:
 	pip install --user --force-reinstall dist/*.whl
 
-brain-games:
-	poetry run brain-games
+brain-start:
+	poetry run brain-start
 
 brain-even:
 	poetry run brain-even

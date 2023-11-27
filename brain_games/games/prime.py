@@ -1,37 +1,18 @@
 #!/usr/bin/env python3
-
 import random
 from math import ceil, sqrt
 
 
-def prime_value():
-    num = random.randint(2, 97)  # First 25 primes included
-    return num
-
-
-def is_prime(answer, num):
-    enum = 2
-    if num == 2:
-        answer = 'yes'
-    match answer:
-        case 'yes':
-            while enum <= ceil(sqrt(num)):
-                if num % enum != 0:
-                    enum += 1
-                    continue
-                else:
-                    return (False, "'yes' is wrong answer ;(. "
-                            "Correct answer was 'no'.")
-            return (True, 'Correct!')
-        case 'no':
-            while enum <= ceil(sqrt(num)):
-                if num % enum == 0:
-                    return (True, 'Correct!')
-                elif enum <= ceil(sqrt(num)) - 1:
-                    enum += 1
-                    continue
-                else:
-                    return (False, "'no' is wrong answer ;(. "
-                            "Correct answer was 'yes'.")
-        case _:
-            return (False, "You must enter 'yes' or 'no' as answer!")
+def is_prime():
+    question = random.randint(2, 97)  # First 25 primes included
+    if question == 2:
+        real_answer = 'yes'
+        return real_answer, question
+    for i in range(2, ceil(sqrt(question)) + 1):
+        if question % i != 0:
+            continue
+        else:
+            real_answer = 'no'
+            return real_answer, question
+    real_answer = 'yes'
+    return real_answer, question
