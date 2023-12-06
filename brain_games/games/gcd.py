@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import random
 
+START_ANSWER = 'Find the greatest common divisor of given numbers.'
+
 
 def euclid(a, b):
     while a != b:
@@ -11,8 +13,12 @@ def euclid(a, b):
     return b
 
 
-def gcd():
-    num1, num2 = random.randint(1, 100), random.randint(1, 50)
+def gcd_values():
+    return random.randint(1, 100), random.randint(1, 50)
+
+
+def game_output():
+    num1, num2 = gcd_values()
     real_answer = euclid(num1, num2)
     question = f'{num1} {num2}'
     return str(real_answer), question
